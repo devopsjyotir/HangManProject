@@ -89,30 +89,22 @@ h1 {
     height: 90vh;
 }
 
-#wordboard{
-    font-family: 'Peralta' sans-serif;
-}
 
 
-section{
-    margin-top: 90px;
-    margin-left: 80px;
-}
 
-/* button{
-    display: flex;
-} */
 
-.landing-btns{
+.landing-btns {
     padding: 10px 30px;
     border: 1px solid;
     border-radius: 10px;
     margin-top: 20px;
-    background-color: #f7ebc8;
+    background-color: #d4c69e;
     /* display: inline-block; */
    
 }
 
-span, #random-word{
-    color: #e8dfd6;
+.whitebox{
+    background-color: white;
+    padding: 150px 150px 200px 150px;
+    border-radius: 20px;
 }

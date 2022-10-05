@@ -21,15 +21,16 @@
     </nav>
     <div class="content">
         <div class="main-landing">
-<ul id="random-word"></ul>
-
-<button id="restart-btn" class="landing-btns">restart</button>
-
-<section>
-    <span id="incorrect-guesses">incorrect guesses:</span>
-    <br>
-    <span id="guesses remaining">guesses remaining:</span>
-</section>
+            <div class="whitebox">
+            <form id="hangmangame">
+                <input type="text" class="landing-btns" maxlength="1" minlength="1" placeholder="Type a letter to guess" />
+                <input type="submit" id="guessed-letter" value="try" name="guess" class="landing-btns">
+                <button id="restart-btn" class="landing-btns">restart</button>
+            </form>
+            <ul id=""></ul>
+            <p id="remaining-guess"></p>
+            <p id="output" class="output"></p>
+        </div>
 
  </div>
        </div>
