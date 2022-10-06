@@ -1,29 +1,31 @@
 let currentWord = document.getElementById("random-word")
-const words = ["food", "rain", "hunter", "submit", "valid", "opacity", "prejudice", "threaten", "productive", "forum"]
-let lives = 6
-const outcomes = {
-    win: "Congratulations You Win",
-    loss: "Game Over! You Died",
-    wrongInput: "Invalid input. Choose a word from A-Z"
 
-}
 // settings for how the game words and different outcomes
-// function functionality() {
-//     // choose random word and append to list in DOM
-//     let chosenWord = words[Math.floor(Math.random) * words.length]
-//     let chosenWordLength = chosenWord.length
+function functionality() {
+    const words = ["food", "rain", "hunter", "submit", "valid", "opacity", "prejudice", "threaten", "productive", "forum"]
+    let lives = 6
+    const outcomes = {
+        win: "Congratulations You Win",
+        loss: "Game Over! You Died",
+        wrongInput: "Invalid input. Choose a word from A-Z"
+
+    }
+}
+
+const guess = document.querySelector('.guess')
+const restartBtn = document.getElementById('restart-btn')
+const remainingGuess = document.getElementById('remaining-guess')
+const output = document.getElementById('output')
+
+let letterGuessed = input
+
+// choose random word and append to list in DOM
+let chosenWord = words[Math.floor(Math.random) * words.length]
+let chosenWordLength = chosenWord.length
 //     for (i = 0; i < chosenWordLength; i++) {
-//         const listItem = document.createElement('li');
-//         listItem.classList.add('letter');
-//         currentWord.append(listItem)
+// if(guess === chosenWord[i]){
+
+// }
 //     }
-// }
-
-// function check(ev) {
-//     // const letterElements = document.querySelectorAll('.word .letter');
-//    let character = ev.key;
-//  listItem.innerText = `${character}`
-// }
 
 
-// window.addEventListener('keyup', check)
