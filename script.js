@@ -12,6 +12,8 @@ const outcomes = {
 }
 
 
+
+
 // // choose random word 
 const chosenWord = words[Math.floor(Math.random() * words.length)];
 let storeAnswer = []
@@ -19,7 +21,7 @@ let updateBlank;
 let guesses = 10;
 const correctAnswer = [];
 const isGameOver = () => {
-    if (storeAnswer.length === correctAnswer.length ) {
+    if (storeAnswer.length === correctAnswer.length) {
         return true
     }
 }
@@ -72,8 +74,19 @@ function filling() {
 
 
     }
+}
 
+function restart() {
+    letter = ''
+    guesses = 10
+    document.getElementById("remaining-guess").innerHTML = "remaining guesses: " + guesses
 
+    for (let i = 0; i < chosenWord.length; i++) {
+        correctAnswer[i] = "_";
+    }
+
+    updateBlank = correctAnswer.join(" ");
+    document.getElementById("answer").innerHTML = updateBlank;
 
 }
 
@@ -82,10 +95,11 @@ function filling() {
 
 
 
-
 // EventListeners
+const restartButton = document.getElementById('restart-btn')
 const guessClick = document.getElementById('guessClick')
 guessClick.addEventListener('click', filling)
+restartButton.addEventListener('click', restart)
 startGame()
 
 
