@@ -1,5 +1,6 @@
 
 // // defining the array of words to be used
+
 const win = document.createElement('p');
 const h1 = document.querySelector(".landingh1")
 const words = ["food", "hunter", "opacity", "prejudice", "threaten", "productive", "forum"];
@@ -10,7 +11,7 @@ const outcomes = {
     loser: "Game Over! You Died",
     wrongInput: "Invalid input. Choose a word from A-Z"
 }
-
+const darkModeBtn = document.querySelector('.dark-btn')
 
 
 
@@ -61,8 +62,10 @@ function filling() {
         if (isGameOver()) {
             h1.innerText = outcomes.winner
         } else if (guesses < 1) {
-            h1.innerText = outcomes.loser
+            h1.innerText = outcomes.loser;
+            
         }
+        
 
         // if(isALoss()){
         //     h1.innerText = outcomes.loser
@@ -72,14 +75,16 @@ function filling() {
         document.getElementById("remaining-guess").innerHTML = "remaining guesses: " + guesses;
         document.getElementById("answer").innerHTML = correctAnswer.join(" ");
 
-
+     
     }
+    
 }
 
 function restart() {
     letter = ''
     guesses = 10
     document.getElementById("remaining-guess").innerHTML = "remaining guesses: " + guesses
+    h1.innerHTML = "Guess a <span>letter</span>"
 
     for (let i = 0; i < chosenWord.length; i++) {
         correctAnswer[i] = "_";
@@ -90,7 +95,17 @@ function restart() {
 
 }
 
+function darkMode() {
+    const backgrndColor = document.querySelector(".content-landing")
+    const whiteBox = document.querySelector(".whitebox")
+    const answerSPaces = document.getElementById("answer")
 
+    backgrndColor.style.background = '#1C1D25FB'
+    whiteBox.style.background = 'none'
+    whiteBox.style.border = '2px solid #e3d5ca'
+    answerSPaces.style.color = '#dad7cd'
+
+}
 
 
 
@@ -100,6 +115,8 @@ const restartButton = document.getElementById('restart-btn')
 const guessClick = document.getElementById('guessClick')
 guessClick.addEventListener('click', filling)
 restartButton.addEventListener('click', restart)
+darkModeBtn.addEventListener('click', darkMode)
+
 startGame()
 
 

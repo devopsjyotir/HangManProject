@@ -131,7 +131,7 @@ color: #ac8f71;
 margin-top: 20px;
 }
 
-#guessClick:hover, #restart-btn:hover, .homepage-btn:hover{
+#guessClick:hover, #restart-btn:hover, .homepage-btn:hover, .dark-btn{
     cursor: pointer;
     opacity: 0.9;
     transition: 0.5s;
@@ -140,12 +140,17 @@ margin-top: 20px;
 .content-landing{
     display: flex;
     height: 100vh;
-    background-color: #12163a;
+    background-color: #674d05;
 
 }
 
 .landingh1{
 font-size: 30px;
-color: rgba(46, 71, 123, 0.898);
 
+color: #5e503f;
 } 
+
+span{
+
+    color: rgba(196, 181, 132, 0.898);
+}
