@@ -13,7 +13,7 @@ body {
     justify-content: center;
     /* align-items: center; */
     height: 100vh;
-    background-color: #5e503f;
+    background-color: #12163a;
 
 }
 
@@ -82,11 +82,8 @@ h1 {
 
 
 .main-landing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 90vh;
+    display: block;
+    height: 20vh;
 }
 
 
@@ -105,6 +102,50 @@ h1 {
 
 .whitebox{
     background-color: white;
-    padding: 150px 150px 200px 150px;
+    padding: 100px 150px 250px 150px;
     border-radius: 20px;
+    margin: auto;
 }
+
+
+#answer{
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin: auto;
+}
+
+#guessClick, #restart-btn{
+    color: rgb(231, 215, 192);
+    background-color: #9a8163;
+    border: #d4c59e;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+#letter{
+    padding: 5px;
+}
+
+#remaining-guess{
+color: #ac8f71;
+margin-top: 20px;
+}
+
+#guessClick:hover, #restart-btn:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.content-landing{
+    display: flex;
+    height: 100vh;
+    background-color: #12163a;
+
+}
+
+.landingh1{
+font-size: 30px;
+color: rgba(46, 71, 123, 0.898);
+
+} 
