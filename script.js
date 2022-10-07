@@ -19,7 +19,7 @@ let updateBlank;
 let guesses = 10;
 const correctAnswer = [];
 const isGameOver = () => {
-    if (storeAnswer.length === correctAnswer.length) {
+    if (storeAnswer.length === correctAnswer.length ) {
         return true
     }
 }
@@ -49,14 +49,17 @@ function filling() {
             if (chosenWord[i] === letter) {
                 correctAnswer[i] = letter;
                 storeAnswer.push(letter);
-            
+
                 console.log(correctAnswer.toString())
+                console.log(storeAnswer.toString())
 
             }
 
         }
         if (isGameOver()) {
             h1.innerText = outcomes.winner
+        } else if (guesses < 1) {
+            h1.innerText = outcomes.loser
         }
 
         // if(isALoss()){

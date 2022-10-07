@@ -131,7 +131,7 @@ color: #ac8f71;
 margin-top: 20px;
 }
 
-#guessClick:hover, #restart-btn:hover{
+#guessClick:hover, #restart-btn:hover, .homepage-btn:hover{
     cursor: pointer;
     opacity: 0.9;
     transition: 0.5s;
