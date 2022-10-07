@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HangMan</title>
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Peralta">
-    <link rel="stylesheet" href="style.css" media="screen" title="no title">
-    <script src="script.js" charset="utf-8"></script>
+
+
+
 </head>
 
 <body>
@@ -19,21 +19,12 @@
             <li id="nav-links"></li>
         </ul>
     </nav>
-    <div class="content">
-        <div class="main-landing">
-            <div class="whitebox">
-            <form id="hangmangame">
-                <input type="text" class="guess" maxlength="1" minlength="1" placeholder="Type a letter to guess" />
-                <input type="submit" id="try" value="try" name="guess" class="landing-btns">
-                <button id="restart-btn" class="landing-btns">restart</button>
-            </form>
-            <p id="letters"></p>
-            <p id="remaining-guess"></p>
-            <p id="output" class="output"></p>
-        </div>
+    <input id="letter" type="text" maxlength="1" minlength="1">
+    <input id="guessClick" type="button" value="Guess" />
+    <p id="answer"> </p>
+    <p id="remaining-guess"> </p>
 
- </div>
-       </div>
+    <script src="script.js" charset="utf-8"></script>
 </body>
 
 </html>

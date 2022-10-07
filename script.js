@@ -1,24 +1,6 @@
 
-let string
-
-const guess = document.querySelector('.guess')
-const restartBtn = document.getElementById('restart-btn')
-const remainingGuess = document.getElementById('remaining-guess')
-const output = document.getElementById('output')
-
-const answerLetters = document.getElementById("letters");
-
-const answerArr = []
-// settings for how the game words and different outcomes
-
-// defining the array of words to be used
-const words = ["food", "rain", "hunter", "submit", "valid", "opacity", "prejudice", "threaten", "productive", "forum"]
-let lives = 6
-
-
-// choose random word 
-const chosenWord = words[Math.floor(Math.random) * words.length]
-const chosenWordLength = chosenWord.length
+// // defining the array of words to be used
+const words = ["food", "rain", "hunter", "submit", "valid", "opacity", "prejudice", "threaten", "productive", "forum"];
 
 // storing possible outcomes in an object
 const outcomes = {
@@ -28,16 +10,45 @@ const outcomes = {
 }
 
 
-function setup() {
-    // setting up blank spaces to be displayed before a guess is made
-    for (i = 0; i < chosenWordLength; i++) {
-        answerArr[i] = "_"
+// // choose random word 
+const chosenWord = words[Math.floor(Math.random() * words.length)];
+
+let updateBlank;
+let guesses = 10;
+const selectedWordArr = [];
+
+function startGame() {
+    for (let i = 0; i < chosenWord.length; i++) {
+        selectedWordArr[i] = "_";
     }
 
-    string = answerArr.join("")
+    updateBlank = selectedWordArr.join(" ");
+    document.getElementById("answer").innerHTML = updateBlank;
 }
 
 
+// setting up blank spaces to be displayed before a guess is made
+function filling() {
+    let letter = document.getElementById("letter").value;
+    if (letter.length > 0) {
+        for (let i = 0; i < chosenWord.length; i++) {
+            if (chosenWord[i] === letter) {
+                selectedWordArr[i] = letter;
+            }
+
+        }
+
+        guesses--;
+        document.getElementById("remaining-guess").innerHTML = "remaining guesses: " + guesses;
+        document.getElementById("answer").innerHTML = selectedWordArr.join(" ");
+    }
+}
+
+
+// EventListeners
+const guessClick = document.getElementById('guessClick')
+guessClick.addEventListener('click', filling)
+startGame()
 
 
 
@@ -48,15 +59,3 @@ function setup() {
 
 
 
-// function gameOver(winner){
-//     if(win){
-//         output.innerText = outcomes.winner
-//     }else {output.innerText = outcomes.loser}
-// }
-// guess.value = ""
-
-
-// reloads the game functionality when the restart button is clicked.
-restartBtn.addEventListener('click', functionality)
-
-window.onload = functionality()
